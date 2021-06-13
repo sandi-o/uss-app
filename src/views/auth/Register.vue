@@ -75,6 +75,7 @@ export default {
                 }).then(() => {
                     this.loading = false;
                     this.$router.push({name: 'Home'})
+                    setTimeout(() => { this.$store.commit('snackbar/CLEAR_SNACKBAR');},4000); 
                 }).catch(() => {
                     this.loading = false;
                     setTimeout(() => { this.$store.commit('snackbar/CLEAR_SNACKBAR');},4000); 
